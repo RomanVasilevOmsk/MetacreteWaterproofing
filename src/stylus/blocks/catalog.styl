@@ -1,0 +1,297 @@
+.catalog
+  color #000
+
+  //&__wrapper
+  //  max-width 1200px
+  //  margin 0 auto
+
+  &__first-block
+    .catalog__block-title
+      background-color #65b3e4
+      color #fff
+      margin-top 40px
+
+  &__second-block
+    .catalog__block-title
+      background-color #388dc6
+      color #fff
+
+  &__third-block
+    .catalog__block-title
+      background-color #2573a3
+      color #fff
+
+  &__block-title
+    text-align center
+    text-transform uppercase
+    font-weight 400
+    color #2473a3
+    font-size 32px
+    text-decoration none
+    display block
+    padding 50px 0
+    @media (max-width: 768px)
+      display block
+      margin 0 auto
+      max-width 100%
+      padding 50px 30px
+
+  &__item
+    text-align center
+    position relative
+
+  &__ico
+    position absolute
+    right 3%
+    margin-top -76px
+    -moz-transform: rotate(180deg);  /* Firefox */
+    -o-transform: rotate(180deg);  /* Opera */
+    -webkit-transform: rotate(180deg);  /* Safari y Chrome */
+    @media (max-width: 768px)
+      margin-top -74px
+      right 20px
+    @media (max-width: 514px)
+      margin-top -90px
+      right 20px
+    @media (max-width: 400px)
+      margin-top -120px
+
+    &.active-block-ico
+      -moz-transform: rotate(0deg);  /* Firefox */
+      -o-transform: rotate(0deg);  /* Opera */
+      -webkit-transform: rotate(0deg);  /* Safari y Chrome */
+
+
+  //&__first-block
+  //  .catalog__content
+  //    display block
+
+
+  &__content
+    display none
+    max-width 1200px
+    margin 0 auto
+
+  &__content-item
+    width auto
+
+  &__product-wrapper
+    width 100%
+
+  &__left-block
+    float left
+    position relative
+    &--small
+      width 40%
+    &--big
+      width 44%
+    @media (max-width: 768px)
+      width 100%
+      margin 0 auto
+
+  &__ico-container
+    width 20%
+    float left
+    position absolute
+    bottom 12px
+    left 56px
+
+  &__ico-img
+    margin-top 20px
+
+  &__img
+    width 58%
+    margin 28px 0 0 38px
+    &--2
+      margin 125px 0 0 38px
+      @media (max-width: 768px)
+        margin 50px 0 0 38px
+    &--3
+      width 80%
+      margin 140px 0 0 38px
+      @media (max-width: 768px)
+        margin 50px 0 0 38px
+    &--4
+      width 60%
+      margin 140px 0 0 38px
+      @media (max-width: 768px)
+        margin 50px 0 0 38px
+    &--5
+      margin 140px 0 0 38px
+      @media (max-width: 768px)
+        margin 50px 0 0 38px
+    &--6
+      margin 120px 0 0 38px
+      @media (max-width: 768px)
+        margin 50px 0 0 38px
+
+  &__img-wrapper
+    width 80%
+    float right
+
+  &__right-block
+    float right
+    &--big
+      width 60%
+    &--small
+      width 56%
+    @media (max-width: 768px)
+      width 100%
+      margin 0 auto
+
+
+  &__desc-top
+    text-align left
+    margin-top 25px
+    max-width 92%
+    font-weight 300
+    line-height 1.5em
+    @media (max-width: 768px)
+      text-align center
+
+  &__table-title
+    text-align left
+    text-transform uppercase
+    font-size 18px
+    margin-top 20px
+    font-weight 400
+    color #2473a3
+    @media (max-width: 768px)
+      text-align center
+
+
+  &__title
+    text-align left
+    margin-left 70px
+    color #2473a3
+    font-weight 400
+    text-transform uppercase
+    font-size 29px
+    margin-top 48px
+    border-bottom 1px solid
+    width 86%
+    padding-bottom 13px
+    @media (max-width: 768px)
+      text-align center
+      margin-left 0
+      width 100%
+
+  &__product-desc-item
+    text-align left
+    &--big
+      margin-bottom 8px
+
+  &__product-content
+    display none
+
+
+  &__table
+    max-width 650px
+    text-align left
+    margin-top 18px
+    width 100%
+    & tr
+      font-weight 300
+      @media (max-width: 768px)
+        font-size 12px
+      @media (max-width: 500px)
+        font-size 10px
+      @media (max-width: 500px)
+        font-size 9px
+    & tr:nth-child(odd) td
+      background-color #b2d8f1
+    & tr td:nth-child(1)
+      padding: 10px 12px 10px 20px
+      max-width: 90%;
+      display: block;
+    & tr td:nth-child(2)
+      padding: 10px 12px 10px 20px;
+      max-width: 90%;
+    & tr td
+      vertical-align: inherit;
+    &--min
+      max-width 610px
+    @media (max-width: 1110px)
+      padding-right 20px
+    @media (max-width: 768px)
+      width 100%
+      margin 25px auto 0 auto
+    @media (max-width: 680px)
+      padding-right 0
+
+
+  &__desc-bottom-wrapper
+    max-width 65%
+    float left
+    @media (max-width: 1090px)
+      max-width 50%
+    @media (max-width: 768px)
+      max-width 100%
+      margin 0 auto
+      padding-right 40px
+
+  &__desc-bottom-title
+      text-align left
+      text-transform uppercase
+      font-weight 400
+      color #2473a3
+      font-size 18px
+      margin 30px 0 0 70px
+
+  &__desc-bottom
+    text-align left
+    margin 16px 0 15px 70px
+    font-size 18px
+    line-height 1.4em
+
+
+  &__product-accordeon
+    clear both
+    margin-top 43px
+    display block
+    padding 0 70px
+    margin-bottom 40px
+    @media (max-width: 680px)
+      padding 0
+
+  &__product-content
+    padding 18px 10px 18px 10px
+    font-size 18px
+    line-height 1.4em
+
+  &__product-item
+    text-align left
+    border-bottom 1px solid #65b2e4
+    position relative
+    &:first-child
+      border-top 1px solid #65b2e4
+    & .catalog__ico
+      right 40px
+      margin-top -27px
+      @media (max-width: 680px)
+        right 20px
+
+
+  &__product-item-wrapper
+    border-left 1px solid #65b2e4
+    border-right 1px solid #65b2e4
+
+  &__product-item-title
+    text-decoration none
+    text-transform uppercase
+    display block
+    margin 0
+    color #000
+    font-weight 400
+    padding 11px 0 11px 12px
+    letter-spacing 0.1em
+    background-color #fff
+    &.active-block
+      background-color #65b2e4
+
+  &__product-list
+    list-style none
+    margin 0
+
+.catalog__left-block--small .catalog__img
+  width 50%

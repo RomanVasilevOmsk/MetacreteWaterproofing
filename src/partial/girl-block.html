@@ -1,0 +1,37 @@
+<section class="girl-block">
+    <div class="girl-block__wrapper">
+        <div class="girl-block__line wow fadeIn"></div>
+        <h2 class="girl-block__title wow fadeIn">оставьте заявку и мы подберем вам смесь,<br>
+            исходя из вашей задачи</h2>
+        <div class="girl-block__left wow fadeInLeft">
+            <div class="girl-block__form">
+                <form class="girl-block-form" action="succes.php" method="post">
+                    <label class="girl-block-form__title">оставьте номер телефона</label>
+                    <!--<p class="girl-block__spec-desc">экономия до 40% на все-->
+                        <!--смеси для гидроизоляции</p>-->
+                    <input class="girl-block-form__phone" type="text" name="phone" required="" placeholder="Введите ваш телефон">
+                    <p class="girl-block-form__call"><?= timeUtm();?></p>
+                    <button class="button-girl-form" type="submit">Получить консультацию</button>
+                    <p class="girl-block-form__desc">Нажимая на кнопку, я даю <a href="soglashenie.pdf" target="_blank" class="girl-block-form__link">cогласие на обработку персональных данных</a></p>
+
+                    <input type="hidden" name="forma" value="Оставьте номер телефона">
+                    <input type="hidden" name="order_type" value="2">
+                    <input type="hidden" name="utm_source" value="<?php echo isset($_GET['utm_source']) ? $_GET['utm_source'] : '' ;?>">
+                    <input type="hidden" name="utm_medium" value="<?php echo isset($_GET['utm_medium']) ? $_GET['utm_medium'] : '' ;?>">
+                    <input type="hidden" name="utm_campaign" value="<?php echo isset($_GET['utm_campaign']) ? $_GET['utm_campaign'] : '' ;?>">
+                    <input type="hidden" name="utm_term" value="<?php echo isset($_GET['utm_term']) ? $_GET['utm_term'] : '' ;?>">
+                    <input type="hidden" name="utm_placement" value="<?php echo isset($_GET['utm_placement']) ? $_GET['utm_placement'] : '' ;?>">
+                    <input type="hidden" name="utm_creative" value="<?php echo isset($_GET['utm_creative']) ? $_GET['utm_creative'] : '' ;?>">
+                    <input type="hidden" name="utm_content" value="<?php echo isset($_GET['utm_content']) ? $_GET['utm_content'] : '' ;?>">
+                    <input type="hidden" value="8838" name="time_spend"><input type="hidden" value="false" name="mobile">
+                </form>
+            </div>
+        </div>
+        <div class="girl-block__right wow fadeInRight">
+            <img class="girl-block__img"   src="./images/girl-bg-compressor.jpg" alt="Logo">
+        </div>
+
+    </div>
+
+
+</section>

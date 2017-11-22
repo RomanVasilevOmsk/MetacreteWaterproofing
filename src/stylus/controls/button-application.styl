@@ -1,0 +1,72 @@
+.button-application
+  font-weight 400
+  padding .3em .8em
+  border 2px solid #fff
+  font-size 100%
+  line-height 1.5
+  display block
+  color #fff
+  text-decoration none
+  outline none
+
+  &--top
+    position absolute
+    right 2px
+    display inline-block
+    z-index 9
+    top 68px
+    -webkit-transition-property background
+    -webkit-transition-duration 0.5s
+    -webkit-transition-timing-function ease
+    @media (max-width: 768px)
+      right 0
+      left 0
+      margin 0 auto
+      max-width 215px
+
+  &--bottom
+    max-width 205px
+    text-align center
+    margin 0 auto
+    padding 9px 0
+    top 78%
+    position absolute
+    left 0
+    right 0
+    font-size 86%
+    -webkit-transition-property background
+    -webkit-transition-duration 0.5s
+    -webkit-transition-timing-function ease
+    @media (max-width: 768px)
+      margin 0 auto
+      float none
+      top 75%
+
+  &:hover
+    cursor pointer
+    background-color rgba(255, 255, 255, 1)
+    color #000
+    -webkit-transition-property background
+    -webkit-transition-duration 0.2s
+    -webkit-transition-timing-function ease
+
+
+  &--arrow
+    width 100%
+    max-width 36px
+    display inline-block
+    float left
+    margin 0 auto
+    height 52px
+    border none
+    top 86%
+    left 0
+    right 0
+    position absolute
+    background-repeat no-repeat
+    background-image url("data:../images/base64/arrow-button.png;base64,iVBORw0KGgoAAAANSUhEUgAAAD0AAAA9CAYAAAAeYmHpAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA3ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTM4IDc5LjE1OTgyNCwgMjAxNi8wOS8xNC0wMTowOTowMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDoyZjhiNmZiZS1kOTFhLTdjNDUtODhiMS05ZWQxNjM3Zjc4NTgiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6RTQ1NTFBNzZCRUQ5MTFFN0FFNjZBNzIzOEE2NTM1RkYiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6RTQ1NTFBNzVCRUQ5MTFFN0FFNjZBNzIzOEE2NTM1RkYiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTcgKFdpbmRvd3MpIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6N2JhNzRkYWYtMWQwZC0yZDQ2LTg0NGEtNTNiNjEyNDRkNzQxIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjJmOGI2ZmJlLWQ5MWEtN2M0NS04OGIxLTllZDE2MzdmNzg1OCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PjjL1fYAAAVSSURBVHja5JvfTxRXFMeHFRTIggISFZdq/cXqP2A1Lq2YGlhT+6TpQ42Y4CsPVbAxaupj648HX5uaGN9sU/epLcbWwKo1vlmjYFGj8oIxYgt18RdMz9HvxeNkN7uzc+/AjDf5ZvbX3Hs+e2funHvuuSW2bVs+lCrSKtKHpFq8LyW9Io2RnpDukv7Ge6Ol1FC9MdJmUgupmdTo4twhUh/pD9J50gPdxpVo7GnuvW2knaQE1y2+e4ZevEN6hN58hT+dz6snLcfVUC7OY+PSpFOkH7VdBQztUbWkb0iP7bclQ/qJtJu0mhQpsK4Ifr8b52dEnVz/YbTnyWYvJ5eSviKNCsMukdpJ1Rr+TAv1tKNeVbi9PWjfV+i1pL+EIT2kZk2guZRAO6pchx3GoXkM2Et6gYZvk7YYhnUqiXZt2NEFu4xAV5JSaGyCdIRU4TOwUgXan4A9KdinFZoHj8tiQGmbJlinWsUAernQQa5Q4Guo+B4pPkOAleKwy4addV6h+ZK5ggpvkhbPMGAltusG7LyS71LPN2idRUVDpNgMBVaKwU4bdpcUA92FCkbgMFgBUFzc491uodficTBJ2hoQYKWtsJvtX1co9Bzcv1yOBwxY6Rjs7wdPXuivheNRHlDocuHAHMwHXSt86WRAgaXnpnz1d57fEcekqxNTvXOkX6xgF7a/BzyduaaWUYzUNpx7KwRKiCdQNFtPf0GqIV3CxD0MJQ2eGvC9LhL6Sxx/sMJVFM8OZ7iIY1j3SeOkhX4E53wsfE8PkypISznmpnp6M2JaPSEDtsDTA75P5eW9EcffrXAWxdUioZtxvOCiotmkLtIGnwH49jtEWuLiHMWVUI+s+RjWx11ELVmf47znPoaMYsLT+t5lmEs5XfURxJotxKUnXfx7HJDvR4//TNpiuIdj6DGOjz8lnXQT6SYN4PXKiFh9GHRpxBOMBX6AK+AVAE6S/nRZx30cGxl6Ad48LsKYhz6Ax7DEw8AZAPcVUc8IjgsYulIM7VaR4C2GwBcDeCWA24oElnyV0iN76cG44SzgSQ3AFzQBc3mhvFAJXebRSCf4WQ/gOntYPmK5TEZQqXLXrBkA3gDgVRqBJV8mgnuSS52m+9ALeAMuad3AFpIB3oxB9LBeLwLlOh2JhYhRKQcmXySmgTSA3z8lfazZnquoe730yDIuPbJiwHMtBy0yDPyOR6Y+fIAP1hhwHfOBmwa2wKUWLaYmHH2O2ZbOMox6B3CPp3CvqskDD1pNwvHoNWDDRskZccxCNhlyI7OB70S7ccPAU1NK/MFTgcFGrArw5VVlcJa0SFzqtuFLWqkKbTDfB864dy+M2GV4eijB2ZhPDLe3C231Zgv2d+DLtA/zYgY/isel6bYugqtDfSbzyKJIXJuHCMPFEISJEhi8/sEU+j9nCJg/OIHXB0ISG9uP4wkFnC15Tq5ltQV8daNVrGXV5Vu13BuSVctBcHQVslRbhsQ0G+u8QYQ+KhLsygrNRPgowJkInxWTiaDULfLG4gEBbvKSc6JmJqmAZhelis0uei/zyJTmByxjsN5Ubmhr2HNDc2UBfzfNWcDfms4CloNbt8j3HpyGLKSkcDzYjn0m872dGYXXxZz4Nx+Sc7j+X6cjs9+5h4Nd1jFhSBp7LqKaQKOoLy3aGINr6fseDucgd1ikYzl368Rd7tZpyrFbZwTt1Hm1Wee+rGrSdmTxOPdljWP9+zZWR0ett/uyqrHQsAJB/grHujKnRZ0mncF5notOaFmWIMjoZQceBw3Pi3VlbcUUdLZ1JA7zLkNkZi5pFmmC9C8iG7zX8pYf2U3/CzAAUBJLVkc9p1cAAAAASUVORK5CYII=")
+    &:hover
+      background-color rgba(255, 255, 255, 1)
+      border-radius 35px
+      background-image url("data:../images/base64/arrow-button-active.png;base64,iVBORw0KGgoAAAANSUhEUgAAAD0AAAA9CAMAAAApvJHbAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAABFUExURQAAAP///////////////////////////////////////////xYYFerq6snKyR4gHb6/vj0/Pj5APjo8OT0+PImJiK2tqyOUAqwAAAALdFJOUwAKjzihYsAd6rSYXHCFzgAAAVJJREFUSMetl9uSgyAMhhVBYCK23a37/o+6aMdphSQc0v/CGR0/iYSchoGSNUp777UydmjTpB18yumpFrUJen6gxgQ7A6W5xI8eOPmRgw2UZGjYQ1me+mMHNXJWAOO4hXrZ7pXR1VvgiLfvNrnzBlr14fcR2jV2230c+h5n5W6bu+hZsvS5uO6kdcdBSY7MBL2aBIa/THfd9G769cm2Mq+HLVzuU3/dl9udhn+XLfHZNUDCD41H+LYmoaKgEs9hUFmEUDgCxyjP4gvHMRijURyFURrBwxODcTrDCTjSCoo4Bcc9xxNieLxxEo7+JnLDG6fhPT8AjzMwMDH2wvfrysQYGd87+MfAR3zTuSXiCwMfuYVJD5zZZynUXDpYSzlVls9ltURYx7pqqP9S/Zb1DsK+RdgzCfs1Wa8o7FOFPbKwP5fOBsK5RDgTSecx6SzYMIf+A0cCfYNGWm+wAAAAAElFTkSuQmCC")
+

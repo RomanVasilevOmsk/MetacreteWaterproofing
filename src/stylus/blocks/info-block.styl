@@ -1,0 +1,83 @@
+.js-info-bg
+  display none
+  position absolute
+  top 0
+
+
+#plan-box
+  position relative
+  margin 0px auto 0 auto
+  width 950px
+  @media (max-width: 986px)
+    display none
+
+.info-block
+  //background url(../images/info-block/info-bg.jpg) repeat-x
+  //background-position-y 357px
+  //position relative
+  @media (max-width: 986px)
+    display none
+
+
+  &__wrapper
+    max-width 1200px
+    margin 0 auto
+
+
+  &__title
+    padding 50px 0 20px 0
+    text-align center
+    font-size 27px
+    text-transform uppercase
+    color #3274a6
+
+  &__pin
+    position absolute
+    z-index 999
+    &--1
+      top 110px
+      left 295px
+    &--2
+      top 240px
+      left 114px
+    &--3
+      top 507px
+      left 57px
+    &--4
+      top 500px
+      left 400px
+    &--5
+      top 575px
+      right  90px
+    &--6
+      top 342px
+      right  170px
+    &--7
+      top 113px
+      right  210px
+    &--8
+      top 111px
+      right  261px
+
+  &__pulse
+    position relative
+    display block
+    width 20px
+    height 20px
+    border 1px solid #3480c7
+    box-shadow 0 0 0 0 rgba(90, 153, 220, 0.7), inset 0 1px 0 #abcbe9
+    border-radius 100%
+    background #5a99d4
+    background-image -webkit-gradient(linear, 50% 0, 50% 100%, color-stop(0, #6ea6d9), color-stop(100%, #468ccf))
+    background-image -webkit-linear-gradient(#6ea6d9, #468ccf)
+    background-image -moz-linear-gradient(#6ea6d9, #468ccf)
+    background-image -o-linear-gradient(#6ea6d9, #468ccf)
+    background-image linear-gradient(#6ea6d9, #468ccf)
+    cursor pointer
+    -webkit-animation  pulses 1s infinite cubic-bezier(0.6, 0, 0, 1)
+    &:hover
+      -webkit-animation:none
+
+@-webkit-keyframes pulses
+  to
+    box-shadow 0 0 0 15px rgba(90, 153, 220, 0), inset 0 1px 0 #abcbe9

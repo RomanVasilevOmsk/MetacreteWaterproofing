@@ -1,0 +1,45 @@
+<div class="application__wrapper">
+<section class="application" id="js-application">
+    <ul class="application__properties">
+        <li class="application__properties-item application__properties-item--1 wow fadeIn" >Водонепроницаемость</li>
+        <li class="application__properties-item application__properties-item--2 wow fadeIn" data-wow-delay=".2s">Прочность</li>
+        <li class="application__properties-item application__properties-item--3 wow fadeIn" data-wow-delay=".3s">Долговечность</li>
+        <li class="application__properties-item application__properties-item--4 wow fadeIn" data-wow-delay=".4s">Водостойкость</li>
+        <li class="application__properties-item application__properties-item--5 wow fadeIn" data-wow-delay=".5s">Эластичность</li>
+    </ul>
+    <h1 class="application__title wow fadeIn">METACRETE Hydrostop</h1>
+    <table class="application__title-desc wow fadeIn"><tbody><tr>
+        <td>Гидроизоляция не только предохраняет защищаемую поверхность от контакта с водой,
+                но и обеспечивает парогидроизоляцию, повышает стойкость строительной конструкции
+                против коррозии, тем самым продлевая её срок службы.</td></tr></tbody></table>
+    <div class="application__content">
+        <div class="application__content-left">
+            <div class="application__content-left-inner">
+                <h3 class="application__content-title wow fadeInLeft">Свойства</h3>
+            </div>
+        </div>
+        <div class="application__content-right">
+            <div class="application__content-right-inner ">
+                <form class="properties-form wow fadeInRight" action="succes.php" method="post">
+                    <label class="properties-form__title">Получить расчет цен бесплатно</label>
+                    <input class="properties-form__phone" type="text" name="phone" required="" placeholder="Введите ваш телефон">
+                    <p class="properties-form__call"><?= timeUtm();?></p>
+                    <button class="button-properties-form" type="submit">Получить Консультацию</button>
+                    <p class="properties-form__desc">Нажимая на кнопку, я даю <a href="soglashenie.pdf" target="_blank" class="properties-form__link">cогласие на обработку персональных данных</a></p>
+                    <input type="hidden" name="forma" value="Получить расчет цен">
+                    <input type="hidden" name="order_type" value="2">
+                    <input type="hidden" name="utm_source" value="<?php echo isset($_GET['utm_source']) ? $_GET['utm_source'] : '' ;?>">
+                    <input type="hidden" name="utm_medium" value="<?php echo isset($_GET['utm_medium']) ? $_GET['utm_medium'] : '' ;?>">
+                    <input type="hidden" name="utm_campaign" value="<?php echo isset($_GET['utm_campaign']) ? $_GET['utm_campaign'] : '' ;?>">
+                    <input type="hidden" name="utm_term" value="<?php echo isset($_GET['utm_term']) ? $_GET['utm_term'] : '' ;?>">
+                    <input type="hidden" name="utm_placement" value="<?php echo isset($_GET['utm_placement']) ? $_GET['utm_placement'] : '' ;?>">
+                    <input type="hidden" name="utm_creative" value="<?php echo isset($_GET['utm_creative']) ? $_GET['utm_creative'] : '' ;?>">
+                    <input type="hidden" name="utm_content" value="<?php echo isset($_GET['utm_content']) ? $_GET['utm_content'] : '' ;?>">
+                    <input type="hidden" value="8838" name="time_spend"><input type="hidden" value="false" name="mobile">
+                </form>
+            </div>
+
+        </div>
+    </div>
+</section>
+</div>
