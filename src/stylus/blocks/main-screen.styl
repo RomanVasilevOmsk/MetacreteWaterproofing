@@ -1,29 +1,40 @@
 .main-screen
   width 100%
   position relative
-  @media (max-width: 768px)
-    background url(../images/bg-mobile.jpg) no-repeat fixed
-    background-size cover
+  background url(../images/main-bg.jpg) no-repeat fixed
+  background-size cover
   &__price
     color #f5c007
+
+  &__img
+    width 100%
+    max-width 220px
+    max-height 452px
+    float left
+    @media (max-width: 800px)
+      display none
   &__inner
-    height 100vh
+    //height 100vh
+    height 800px
     width 100vw
-    display flex
-    justify-content center
-    flex-direction column
+    //display flex
+    //justify-content center
+    //flex-direction column
     font-family: 'Roboto', sans-serif
     font-weight 500
     text-transform uppercase
     top 0
-    background: -moz-radial-gradient(ellipse at center, rgba(0, 0, 0, 0) 0%,rgba(18, 24, 27, 0.05) 75%,rgba(40, 52, 59, 0.96) 100%) /* FF3.6-15 */
-    background: -webkit-radial-gradient(ellipse at center, rgba(0, 0, 0, 0) 0%,rgba(18, 24, 27, 0.05) 75%,rgba(40, 52, 59, 0.96) 100%) /* Chrome10-25,Safari5.1-6 */
-    background radial-gradient(ellipse at center, rgba(0,0,0,0) 0%, rgba(18,24,27,0.4) 45%, rgba(40,52,59,1) 100%)
+    @media (max-width: 800px)
+      height 650px
+
+    //background: -moz-radial-gradient(ellipse at center, rgba(0, 0, 0, 0) 0%,rgba(18, 24, 27, 0.05) 75%,rgba(40, 52, 59, 0.96) 100%) /* FF3.6-15 */
+    //background: -webkit-radial-gradient(ellipse at center, rgba(0, 0, 0, 0) 0%,rgba(18, 24, 27, 0.05) 75%,rgba(40, 52, 59, 0.96) 100%) /* Chrome10-25,Safari5.1-6 */
+    //background radial-gradient(ellipse at center, rgba(0,0,0,0) 0%, rgba(18,24,27,0.4) 45%, rgba(40,52,59,1) 100%)
 
   &__wrapper
-    max-width 1200px
+    max-width 1315px
     margin 0 auto
-    padding-left 150px
+    padding-top 188px
     @media (min-width: 993px) and (max-width: 1200px)
       max-width 100%
     @media (min-width: 769px) and (max-width: 992px)
@@ -31,42 +42,52 @@
     @media (max-width: 768px)
       padding-left 0
     & br
-      @media (max-width: 768px)
+      @media (max-width: 800px)
         display none
 
   &__title
-    font-size 42px
+    font-size 47px
     font-weight 500
     text-align left
-    color: #fff;
-    letter-spacing 0.03em
+    color #fff
+    letter-spacing .03em
     line-height 1.3em
-    background rgba(0, 0, 0, 0.50)
-    padding: 10px 12px 8px 12px
-    display block
+    display inline-block
+    margin 45px 12px 0 65px
+    border-bottom 4px solid #519ed1
     @media (min-width: 993px) and (max-width: 1200px)
       font-size 33px
     @media (min-width: 769px) and (max-width: 992px)
       font-size 30px
       padding-bottom 1px
-    @media (max-width: 768px)
-      font-size 20px
-      display block
+    @media (max-width: 800px)
       text-align center
+      padding 0 15px
+      margin 0
+    @media (max-width: 480px)
+      font-size 30px
+      margin-bottom 20px
 
   &__text-content
-    font-size 30px
+    font-size 35px
+    font-weight 400
     text-align left
-    display inline
-    background rgba(0, 0, 0, 0.50)
-    padding 0px 12px 2px 12px
+    display inline-block
+    margin 8px 0 0 55px
+    padding 0 12px 2px 12px
+    max-width 530px
+    &--2
+      margin -1px 0 0 55px
+      @media (max-width: 800px)
+        margin 0
     @media (min-width: 993px) and (max-width: 1200px)
       font-size 27px
-    @media (max-width: 768px)
-      font-size 15px
-      display block
+    @media (max-width: 800px)
       text-align center
-    &:last-child
-      line-height 1.8em
-      padding 6px 12px 7px 12px
+      padding 0 15px
+      margin 5px 0 0 0
+      display block
+      max-width 100%
+    @media (max-width: 480px)
+      font-size 18px
 

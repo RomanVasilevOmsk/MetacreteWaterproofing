@@ -25,47 +25,50 @@ require_once 'cpc.php';
         </div>
 
         <div class="l-page__inner">
-            @@include('./partial/video.html')
+            <!--@@include('./partial/video.html')-->
             @@include('./partial/main-screen.html')
         </div>
-
+    <div class="l-page__container">
+        @@include('./partial/info-block.html')
+    </div>
         <div class="l-page__container">
             <!--<div class="l-page__application">-->
                 @@include('./partial/application.html')
             <!--</div>-->
         </div>
 
-
-        <div class="l-page__container">
-            @@include('./partial/employment.html')
-        </div>
+<!---->
+<!--        <div class="l-page__container">-->
+<!--            @@include('./partial/employment.html')-->
+<!--        </div>-->
         <div class="l-page__container">
              @@include('./partial/saving.html')
         </div>
 
-        <div class="l-page__container">
-            @@include('./partial/designation-ico.html')
-        </div>
+        <!--<div class="l-page__container">-->
+            <!--@@include('./partial/designation-ico.html')-->
+        <!--</div>-->
 
-         <div class="l-page__container">
-            @@include('./partial/catalog-title.html')
-        </div>
+         <!--<div class="l-page__container">-->
+            <!--@@include('./partial/catalog-title.html')-->
+        <!--</div>-->
 
+        <!--<div class="l-page__container">-->
+            <!--@@include('./partial/catalog.html')-->
+        <!--</div>-->
+        <!--<div class="l-page__container">-->
+            <!--@@include('./partial/table-block.html')-->
+        <!--</div>-->
+        <!--<div class="l-page__container">-->
+            <!--@@include('./partial/girl-block.html')-->
+        <!--</div>-->
         <div class="l-page__container">
-            @@include('./partial/catalog.html')
-        </div>
-        <div class="l-page__container">
-            @@include('./partial/table-block.html')
-        </div>
-        <div class="l-page__container">
-            @@include('./partial/girl-block.html')
+            @@include('./partial/key-objects.html')
         </div>
         <div class="l-page__container">
             @@include('./partial/certificates.html')
         </div>
-        <div class="l-page__container">
-            @@include('./partial/info-block.html')
-        </div>
+
         <div class="l-page__container">
             @@include('./partial/clients.html')
         </div>

@@ -7,66 +7,7 @@ $(document).ready(function(){
                 top = $(id).offset().top;
             $('body,html').animate({scrollTop: top}, 1500);
         });
-
-//------------Catalog------------//
-
-    $(".js-catalog__block-title").on("click", function(e) {
-        e.preventDefault();
-        var $thisIco = this.nextElementSibling;// ищем нужные картинки
-        var $this = $(this),
-            answerId = $this.attr("href");
-
-        if( !$this.hasClass("active-block") ) {//если не активный айтем, скрываем все нах
-            $(".js-catalog__content").slideUp(100,function(){
-                var plansOffset = $this.offset().top;// узнаем скольк расстояния до заголовка самого большого
-
-                $("html, body").animate({
-                    scrollTop: plansOffset// собстна скролим до этого заголовка
-                }, 50);
-            });
-            $(".js-catalog__block-title").removeClass("active-block");
-            $(".catalog__ico").removeClass("active-block-ico");
-        }
-
-        $this.toggleClass("active-block");// переключатель активного айтема
-        $($thisIco).toggleClass("active-block-ico");// переключатель активного айтема для картинок
-        $(answerId).slideToggle();
-
-
-        var plansOffset = $this.offset().top;// узнаем скольк расстояния до заголовка самого большого
-
-        $("html, body").animate({
-            scrollTop: plansOffset// собстна скролим до этого заголовка
-        }, 500);
-    });
-
-
-    $(".js-catalog__product-item-title").on("click", function(e) {
-
-        e.preventDefault();
-        var $thisIco = this.nextElementSibling;
-        var $this = $(this),
-            answerId = $this.attr("href");
-
-        if( !$this.hasClass("active-block") ) {
-            $(".js-catalog__product-content").slideUp();
-            $(".js-catalog__product-item-title").removeClass("active-block");
-            $(".catalog__ico").removeClass("active-block-ico");
-        }
-
-        $this.toggleClass("active-block");
-        $($thisIco).toggleClass("active-block-ico");
-        $(answerId).slideToggle();
-
-    });
-
-//------------Catalog------------//
-
-//------------ToolTip------------//
-    $("a[data-tooltip]").on("click", function(e) {
-        e.preventDefault();
-    });
-//------------ToolTip------------//
+    
 
     //------------INFOBLOCK------------//
 
@@ -179,6 +120,7 @@ $(document).ready(function(){
         var currentModal = $(this).attr("href");
         $(currentModal + ", #js-overlay").fadeIn(500);
         $("body").addClass("open-modal");
+        $(".modal-form__phone").focus();
     });
 
     $("#js-overlay, .js-modal-close").on("click", function(e) {
@@ -194,6 +136,12 @@ $(document).ready(function(){
     //---------Mask-----------//
 
     //---------Gallery-----------//
+    $("#js-lightgallery1").lightGallery({
+        mode: "lg-slide-skew-rev",
+        download: false,
+        thumbContHeight: 50
+    });
+
     $("#js-lightgallery").lightGallery({
         mode: "lg-slide-skew-rev",
         download: false,

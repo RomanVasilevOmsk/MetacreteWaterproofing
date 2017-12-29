@@ -12,6 +12,9 @@ $utm_source = urldecode($utm_source);
 $utm_term = trim($_POST["utm_term"]);
 if ($utm_term == "||") $utm_term = "";
 $utm_term = urldecode($utm_term);
+$utm_medium = trim($_POST["utm_medium"]);
+if ($utm_medium == "||") $utm_medium = "";
+$utm_medium = urldecode($utm_medium);
 $utm_campaign = trim($_POST["utm_campaign"]);
 if ($utm_campaign == "||") $utm_campaign = "";
 $utm_campaign = urldecode($utm_campaign);
@@ -230,7 +233,7 @@ $leads['request']['leads']['add']=array(
 		'id'=>37906,
 		'values'=>array(
 		  array(
-			'value'=>$utm_content_arr["srct"]
+			'value'=>$utm_content_arr["sourcetype"]
 		  )
 		)
 	  ),
@@ -243,10 +246,19 @@ $leads['request']['leads']['add']=array(
 		'id'=>37908,
 		'values'=>array(
 		  array(
-			'value'=>$utm_content_arr["src"]
+			'value'=>$utm_content_arr["wwwsource"]
 		  )
 		)
 	  ),
+        array(
+            #Нестандартное дополнительное поле "utm_medium", которое мы создали
+            'id'=>206583,
+            'values'=>array(
+                array(
+                    'value'=>$utm_medium
+                )
+            )
+        ),
 	  array(
 		#Нестандартное дополнительное поле "device", которое мы создали
 		'id'=>37910,
@@ -256,7 +268,115 @@ $leads['request']['leads']['add']=array(
 		  )
 		)
 	  ),
-	  array(
+        array(
+            #Нестандартное дополнительное поле "adid", которое мы создали
+            'id'=>206589,
+            'values'=>array(
+                array(
+                    'value'=>$utm_content_arr["adid"]
+                )
+            )
+        ),
+        array(
+            #Нестандартное дополнительное поле "groupid", которое мы создали
+            'id'=>206587,
+            'values'=>array(
+                array(
+                    'value'=>$utm_content_arr["groupid"]
+                )
+            )
+        ),
+        array(
+            #Нестандартное дополнительное поле "yadopphrase", которое мы создали
+            'id'=>206597,
+            'values'=>array(
+                array(
+                    'value'=>$utm_content_arr["yadopphrase"]
+                )
+            )
+        ),
+        array(
+            #Нестандартное дополнительное поле "yatextdopphrase", которое мы создали
+            'id'=>206599,
+            'values'=>array(
+                array(
+                    'value'=>$utm_content_arr["yatextdopphrase"]
+                )
+            )
+        ),
+        array(
+            #Нестандартное дополнительное поле "yaregion", которое мы создали
+            'id'=>206603,
+            'values'=>array(
+                array(
+                    'value'=>$utm_content_arr["yaregion"]
+                )
+            )
+        ),
+        array(
+            #Нестандартное дополнительное поле "yaregionid", которое мы создали
+            'id'=>206605,
+            'values'=>array(
+                array(
+                    'value'=>$utm_content_arr["yaregionid"]
+                )
+            )
+        ),
+        array(
+            #Нестандартное дополнительное поле "yapositiontype", которое мы создали
+            'id'=>206601,
+            'values'=>array(
+                array(
+                    'value'=>$utm_content_arr["yapositiontype"]
+                )
+            )
+        ),
+        array(
+            #Нестандартное дополнительное поле "googlekwmt", которое мы создали
+            'id'=>206607,
+            'values'=>array(
+                array(
+                    'value'=>$utm_content_arr["googlekwmt"]
+                )
+            )
+        ),
+        array(
+            #Нестандартное дополнительное поле "devicemodel", которое мы создали
+            'id'=>206609,
+            'values'=>array(
+                array(
+                    'value'=>$utm_content_arr["devicemodel"]
+                )
+            )
+        ),
+        array(
+            #Нестандартное дополнительное поле "kategoryplace", которое мы создали
+            'id'=>206611,
+            'values'=>array(
+                array(
+                    'value'=>$utm_content_arr["kategoryplace"]
+                )
+            )
+        ),
+        array(
+            #Нестандартное дополнительное поле "regionid", которое мы создали
+            'id'=>206613,
+            'values'=>array(
+                array(
+                    'value'=>$utm_content_arr["regionid"]
+                )
+            )
+        ),
+        array(
+            #Нестандартное дополнительное поле "gacookie", которое мы создали
+            'id'=>206595,
+            'values'=>array(
+                array(
+                    'value'=>$_COOKIE['_ga']
+                )
+            )
+        ),
+        array(
 		#Нестандартное дополнительное поле "Откуда", которое мы создали
 		'id'=>37894,
 		'values'=>array(
@@ -265,7 +385,44 @@ $leads['request']['leads']['add']=array(
 		  )
 		)
 	  ),
-	  array(
+        array(
+            #Нестандартное дополнительное поле "phraseid", которое мы создали
+            'id'=>205465,
+            'values'=>array(
+                array(
+                    'value'=>$utm_content_arr["phraseid"]
+                )
+            )
+        ),
+        array(
+            #Нестандартное дополнительное поле "position", которое мы создали
+            'id'=>206593,
+            'values'=>array(
+                array(
+                    'value'=>$utm_content_arr["position"]
+                )
+            )
+        ),
+        array(
+            #Нестандартное дополнительное поле "Offline сделка", которое мы создали
+            'id'=> 203585,
+            'values'=>array(
+                array(
+                    'value'=>431837
+                )
+            )
+        ),
+        array(
+            #Нестандартное дополнительное поле "тип продукта", которое мы создали
+            'id'=> 203229,
+            'values'=>array(
+                array(
+                    'value'=>431323
+                )
+            )
+        ),
+
+        array(
 		#Нестандартное дополнительное поле "utm_source", которое мы создали
 		'id'=>37896,
 		'values'=>array(
@@ -288,7 +445,7 @@ $leads['request']['leads']['add']=array(
             'id'=>203301,
             'values'=>array(
                 array(
-                    'value'=>$utm_content_arr["cid"]
+                    'value'=>$utm_content_arr["campaignid"]
                 )
             )
         ),

@@ -1,31 +1,40 @@
-<?php session_start(); ?>
+<?php session_start();
+$phone = trim($_POST["phone"]);
+if (isset($_COOKIE["phonecookie"]) && ($_COOKIE["phonecookie"]) == $phone){
+    $messageForm = "Вы уже оставили данный номер";
+}
+else{
+    setcookie('phonecookie', $phone, time()+3600, "/");
+    $messageForm =  "Спасибо за заявку!</b> <br>В скором времени мы свяжемся с Вами!";
+}
+?>
 <!doctype html>
 <html lang="ru" style="height:100%;">
 <head>
 <!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-TKKGPR8');</script>
+<!--<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':-->
+<!--new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],-->
+<!--j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=-->
+<!--'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);-->
+<!--})(window,document,'script','dataLayer','GTM-TKKGPR8');</script>-->
 <!-- End Google Tag Manager -->
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Спасибо! Данные отправлены</title>
+<title>Спасибо за заявку!</title>
 </head>
 <body style="font-family:Tahoma; height:100%; font-size:30px;">
 <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TKKGPR8"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!--<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TKKGPR8"-->
+<!--height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>-->
 <!-- End Google Tag Manager (noscript) -->
-<div style="border:10px solid #ced8cc; background:rgba(255,255,255,0.7); max-width:600px; margin: 0 auto; padding: 20px; margin-top: 40px; text-align:center;"><b style="font-size:40px;">Спасибо за заявку!</b> <br>В скором времени мы свяжемся с Вами!</div>
+<div style="border:10px solid #ced8cc; background:rgba(255,255,255,0.7); max-width:600px; margin: 0 auto; padding: 20px; margin-top: 40px; text-align:center;"><b style="font-size:40px;"><?php echo $messageForm; ?></div>
 </body>
 </html>	
 <?php
 if (isset($_POST["time_spend"])){
 	
-$phone = trim($_POST["phone"]);
+//$phone = trim($_POST["phone"]);
 $name = trim($_POST["name"]);
 $forma = trim($_POST["forma"]);
 $order_type = trim($_POST["order_type"]);
@@ -129,6 +138,12 @@ else
 }
 }
 
+    $url = $_SERVER['HTTP_REFERER'];
+    $host = parse_url($url,PHP_URL_HOST);
+    $host .='/hydrostop';
+    $message .= '<tr><td>Страница захвата:</td><td> https://'.$host.'/hydrostop</td></tr>';
+    $amo_message .='Страница захвата: https://'.$host.PHP_EOL;
+
 if(isset($_SESSION['referer'])){
 $message .= '<tr><td>Реферальный хвост:</td><td>'.$_SESSION['referer'].'</td></tr>';
 $amo_message .='Реферальный хвост: '.$_SESSION['referer'].PHP_EOL;
@@ -157,14 +172,18 @@ if ($_SERVER['REMOTE_ADDR']) {
   $amo_message .='Город: '.$city['city'].PHP_EOL;
 }
 } catch(Exception $e){}
-
+    $message .= '<tr><td>Offline сделка:</td><td>Нет</td></tr>';
+    $amo_message .='Offline сделка: Нет'.PHP_EOL;;
 $message .= "</table>";
 
 $mail->Body = $message;
 
-if ($time_spend  > 7){
-    $mail->send();
-	require "amo.php";
-}
+    if (isset($_COOKIE["phonecookie"]) && ($_COOKIE["phonecookie"]) == $phone){
+    }
+    else{
+        $mail->send();
+        require "amo.php";
+    }
+
 
 }?>
